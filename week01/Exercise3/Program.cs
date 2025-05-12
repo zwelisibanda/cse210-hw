@@ -1,9 +1,29 @@
 using System;
+using System.Net;
 
 class Program
 {
+    
+    
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise3 Project.");
+    string response = "";
+        Console.WriteLine("What is the magic number");
+        int magic_number = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("What is your guess?");
+        int guess = Int32.Parse(Console.ReadLine());
+        while (guess != magic_number){
+            Console.Write("What is you guess?");
+            guess = Int32.Parse(Console.ReadLine());
+            if(magic_number > guess){
+                Console.Write("Higher");
+            }else if(magic_number < guess){
+                Console.Write("Lower");
+
+            }else{
+                Console.WriteLine("You guessed it!");
+            }
+        }
+       
     }
 }
